@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     background-color: red;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -30,14 +33,22 @@ body {
     padding: 10px;
 }
 
-.email ~ label {
+.email ~ label, .password ~ label {
    position: absolute;
-   right: 360px;
+   top: 50%;
+   left: 10px;
+   transform: translateY(-50%);
+   transition: 1s;
+   pointer-events: none;
 }
 
-.password ~ label {
-    position: absolute;
-    right: 336px;
+
+input:focus ~ label, input:valid ~ label {
+    top: -3px;
+}
+
+.password:focus ~ label, .password:valid~ label {
+    top: -3px;
 }
 
 .email, .password {
@@ -53,6 +64,8 @@ body {
     margin: 20px;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .msg {
@@ -61,10 +74,19 @@ body {
     text-align: center;
 }
 
-/* .password {
-    border: none;
-    outline: none;
-    border-bottom: 1px solid white;
-    background-color: transparent;
-} */
+.remember {
+    position: relative;
+    top: 2px;
+    font-size: 12px;    
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
 

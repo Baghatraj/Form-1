@@ -3,7 +3,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-image: url('../image/pexels-brian-chapman-1095648.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -17,8 +19,11 @@ body {
 
 .form {
     width: 450px;
-    height: 400px;
-    background-color: rgb(0, 255, 0);
+    height: 420px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
 }
 
 .name {
@@ -35,21 +40,20 @@ body {
 
 .email ~ label, .password ~ label {
    position: absolute;
-   top: 50%;
    left: 10px;
-   transform: translateY(-50%);
    transition: 1s;
    pointer-events: none;
 }
 
 
-input:focus ~ label, input:valid ~ label {
-    top: -3px;
+input:focus ~ label{
+    transform: translateY(-15px);
 }
 
-.password:focus ~ label, .password:valid~ label {
-    top: -3px;
+input:valid ~ label{
+    transform: translateY(-15px);
 }
+
 
 .email, .password {
     border: none;
@@ -69,9 +73,10 @@ input:focus ~ label, input:valid ~ label {
 }
 
 .msg {
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     text-align: center;
+    color: #fff;
 }
 
 .remember {
@@ -80,13 +85,31 @@ input:focus ~ label, input:valid ~ label {
     font-size: 12px;    
 }
 
-.link{
+.link1, .link2{
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 700;
 }
 
-.link:hover{
+.link2{
+    color: #fff;
+}
+
+.link1:hover, .link2:hover{
     text-decoration: underline;
+}
+
+.btn{
+    text-align: center;
+}
+button{
+    width: 70%;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
 }
 
